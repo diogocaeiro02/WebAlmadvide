@@ -1,15 +1,125 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <!-- Alma d'Vide V3 — CSS e JS integrados no HTML para GitHub Pages -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
+  <!-- Alma d'Vide V5 — GitHub Pages + SEO técnico -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#3d493f">
-  <meta name="description" content="Alma d'Vide — duas casas com piscina em Cabeço de Vide, no Alto Alentejo. Um refúgio tranquilo entre termas, património e gastronomia.">
-  <title>Alma d'Vide · Cabeço de Vide</title>
+  <meta name="description" content="Alma d'Vide: duas casas de férias com piscina em Cabeço de Vide, Portalegre. Alojamento no Alto Alentejo perto de termas, Marvão e Castelo de Vide.">
+  <title>Alma d'Vide | Casas com Piscina em Cabeço de Vide, Alentejo</title>
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="geo.region" content="PT-12">
+  <meta name="geo.placename" content="Cabeço de Vide, Portalegre">
+  <link rel="canonical" href="https://almadvide.pt/">
+  <link rel="alternate" hreflang="pt-PT" href="https://almadvide.pt/">
+  <link rel="alternate" hreflang="x-default" href="https://almadvide.pt/">
+
+  <!-- Social sharing / Google image signals -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Alma d'Vide">
+  <meta property="og:title" content="Alma d'Vide | Casas com Piscina em Cabeço de Vide">
+  <meta property="og:description" content="Duas casas independentes com piscina em Cabeço de Vide, no Alto Alentejo. Descubra termas, património, natureza e gastronomia perto de Portalegre.">
+  <meta property="og:url" content="https://almadvide.pt/">
+  <meta property="og:image" content="https://almadvide.pt/assets/hero-almadvide.webp">
+  <meta property="og:image:alt" content="Interior de uma das casas Alma d'Vide em Cabeço de Vide, Alentejo">
+  <meta property="og:image:width" content="1800">
+  <meta property="og:image:height" content="1100">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alma d'Vide | Casas com Piscina no Alto Alentejo">
+  <meta name="twitter:description" content="Alojamento em Cabeço de Vide com duas casas independentes, quintal e piscina.">
+  <meta name="twitter:image" content="https://almadvide.pt/assets/hero-almadvide.webp">
+
+  <!-- Favicons / app icon personalizados -->
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="preload" as="image" href="./assets/hero-almadvide.webp" fetchpriority="high">
+
+  <!-- Adicionar aqui o meta de verificação do Google Search Console quando existir. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://almadvide.pt/#website",
+        "url": "https://almadvide.pt/",
+        "name": "Alma d'Vide",
+        "inLanguage": "pt-PT"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://almadvide.pt/#webpage",
+        "url": "https://almadvide.pt/",
+        "name": "Alma d'Vide | Casas com Piscina em Cabeço de Vide, Alentejo",
+        "description": "Duas casas de férias com piscina em Cabeço de Vide, no distrito de Portalegre, Alto Alentejo.",
+        "isPartOf": {"@id": "https://almadvide.pt/#website"},
+        "mainEntity": {"@id": "https://almadvide.pt/#alojamento"},
+        "inLanguage": "pt-PT",
+        "primaryImageOfPage": {"@id": "https://almadvide.pt/#hero"}
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://almadvide.pt/#hero",
+        "url": "https://almadvide.pt/assets/hero-almadvide.webp",
+        "contentUrl": "https://almadvide.pt/assets/hero-almadvide.webp",
+        "caption": "Alma d'Vide — alojamento em Cabeço de Vide, Alto Alentejo"
+      },
+      {
+        "@type": "LodgingBusiness",
+        "@id": "https://almadvide.pt/#alojamento",
+        "name": "Alma d'Vide",
+        "url": "https://almadvide.pt/",
+        "logo": "https://almadvide.pt/assets/logo-almadvide.png",
+        "image": [
+          "https://almadvide.pt/assets/hero-almadvide.webp",
+          "https://almadvide.pt/assets/casa1/casa1-cozinha-sala-01.webp",
+          "https://almadvide.pt/assets/casa1/casa1-quarto.webp",
+          "https://almadvide.pt/assets/casa1/casa1-suite-01.webp"
+        ],
+        "email": "info@almadvide.pt",
+        "description": "Duas casas independentes com piscina em Cabeço de Vide, no Alto Alentejo, perto de Portalegre, Marvão e Castelo de Vide.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cabeço de Vide",
+          "addressRegion": "Portalegre",
+          "addressCountry": "PT"
+        },
+        "amenityFeature": [
+          {"@type":"LocationFeatureSpecification","name":"Piscina privada","value":true},
+          {"@type":"LocationFeatureSpecification","name":"Ar condicionado","value":true},
+          {"@type":"LocationFeatureSpecification","name":"Cozinha equipada","value":true},
+          {"@type":"LocationFeatureSpecification","name":"Televisão","value":true}
+        ],
+        "containsPlace": [
+          {
+            "@type":"Accommodation",
+            "name":"Alma d'Vide — Casa 1",
+            "numberOfBedrooms":2,
+            "numberOfBathroomsTotal":2,
+            "amenityFeature":[
+              {"@type":"LocationFeatureSpecification","name":"Piscina","value":true},
+              {"@type":"LocationFeatureSpecification","name":"Quintal","value":true}
+            ]
+          },
+          {
+            "@type":"Accommodation",
+            "name":"Alma d'Vide — Casa 2",
+            "numberOfBedrooms":2,
+            "numberOfBathroomsTotal":2,
+            "amenityFeature":[
+              {"@type":"LocationFeatureSpecification","name":"Piscina","value":true},
+              {"@type":"LocationFeatureSpecification","name":"Quintal","value":true}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet">
@@ -203,9 +313,10 @@ footer > * {
 
 /* V4 — logótipo, cartões Descobrir com foto e Airbnb */
 .brand-logo{display:flex;align-items:center}
-.site-logo{width:190px;max-height:56px;object-fit:contain;object-position:left center}
-.topbar:not(.scrolled) .site-logo{filter:brightness(0) invert(1)}
-.topbar.scrolled .site-logo{filter:none}
+.site-logo{width:190px;max-height:56px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1) drop-shadow(0 1px 1px rgba(15,20,16,.90)) drop-shadow(0 4px 10px rgba(15,20,16,.48));transition:filter .3s ease,transform .3s ease}
+.topbar:not(.scrolled) .site-logo{filter:brightness(0) invert(1) drop-shadow(0 2px 2px rgba(8,12,9,.80)) drop-shadow(0 5px 12px rgba(8,12,9,.42))}
+.topbar.scrolled .site-logo{filter:brightness(0) invert(1) drop-shadow(0 1px 1px rgba(22,29,23,.95)) drop-shadow(0 3px 9px rgba(22,29,23,.70))}
+.brand-logo:hover .site-logo{transform:translateY(-1px)}
 .house-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
 .btn-airbnb{background:#fff;color:var(--ink);border-color:rgba(32,37,31,.22)}
 .btn-airbnb:hover{background:#ff5a5f;color:#fff;border-color:#ff5a5f;transform:translateY(-2px)}
@@ -228,12 +339,21 @@ footer > * {
   .place-card.photo-card{min-height:330px}
 }
 
+
+/* V5 — conteúdo SEO útil e FAQs visíveis */
+.seo-faq{background:#f3eee5}
+.faq-grid{max-width:1500px;margin:55px auto 0;display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.faq-item{padding:34px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.faq-item h3{font-family:var(--sans);font-size:17px;font-weight:500;margin:0 0 13px}
+.faq-item p{font-size:14px;line-height:1.8;color:#5f655f;margin:0}
+@media(max-width:700px){.faq-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
   <header class="topbar" id="topbar">
     <a class="brand brand-logo" href="#inicio" aria-label="Alma d'Vide - início">
-      <img src="./assets/logo-almadvide.png" alt="Alma d'Vide" class="site-logo">
+      <img src="./assets/logo-almadvide.png" alt="Alma d'Vide" class="site-logo" width="1100" height="300" decoding="async">
     </a>
 
     <button class="menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false">
@@ -250,7 +370,7 @@ footer > * {
 
   <main>
     <section class="hero" id="inicio">
-      <img src="./assets/hero-almadvide.webp" alt="Interior da Alma d'Vide" class="hero-media">
+      <img src="./assets/hero-almadvide.webp" alt="Casa de férias Alma d'Vide em Cabeço de Vide, Alto Alentejo" class="hero-media" width="1800" height="1100" fetchpriority="high" decoding="async">
       <div class="hero-shade"></div>
       <div class="hero-content">
         <p class="eyebrow light">CABEÇO DE VIDE · ALTO ALENTEJO</p>
@@ -273,7 +393,7 @@ footer > * {
       <div class="intro-grid">
         <p class="eyebrow">ALMA D'VIDE</p>
         <h2>Um refúgio contemporâneo<br>com alma alentejana.</h2>
-        <p class="intro-copy">No coração de Cabeço de Vide, a Alma d'Vide junta o conforto de uma casa cuidada à serenidade do Alto Alentejo. Dias de piscina, noites tranquilas e uma região inteira para descobrir sem pressa.</p>
+        <p class="intro-copy">No coração de Cabeço de Vide, no distrito de Portalegre, a Alma d'Vide é um alojamento no Alto Alentejo com duas casas independentes e piscina. Dias tranquilos, conforto e uma localização ideal para descobrir termas, natureza, património e gastronomia sem pressa.</p>
       </div>
       <div class="facts">
         <div><b>02</b><span>casas independentes</span></div>
@@ -312,13 +432,13 @@ footer > * {
         </div>
         <div class="house-collage">
           <button class="photo photo-main gallery-trigger" data-gallery="casa1" aria-label="Abrir galeria da Casa 1">
-            <img src="./assets/casa1/casa1-cozinha-sala-01.webp" alt="Cozinha e sala da Casa 1">
+            <img src="./assets/casa1/casa1-cozinha-sala-01.webp" alt="Cozinha e sala da Casa 1" loading="lazy" decoding="async">
           </button>
           <button class="photo gallery-trigger" data-gallery="casa1" aria-label="Abrir galeria da Casa 1">
-            <img src="./assets/casa1/casa1-quarto.webp" alt="Quarto da Casa 1">
+            <img src="./assets/casa1/casa1-quarto.webp" alt="Quarto da Casa 1" loading="lazy" decoding="async">
           </button>
           <button class="photo gallery-trigger" data-gallery="casa1" aria-label="Abrir galeria da Casa 1">
-            <img src="./assets/casa1/casa1-suite-01.webp" alt="Suite da Casa 1">
+            <img src="./assets/casa1/casa1-suite-01.webp" alt="Suite da Casa 1" loading="lazy" decoding="async">
           </button>
         </div>
       </article>
@@ -343,13 +463,13 @@ footer > * {
         </div>
         <div class="house-collage">
           <button class="photo photo-main gallery-trigger" data-gallery="casa2" aria-label="Abrir galeria da Casa 2">
-            <img src="./assets/casa2/casa2-cozinha-sala-01.webp" alt="Cozinha e sala da Casa 2">
+            <img src="./assets/casa2/casa2-cozinha-sala-01.webp" alt="Cozinha e sala da Casa 2" loading="lazy" decoding="async">
           </button>
           <button class="photo gallery-trigger" data-gallery="casa2" aria-label="Abrir galeria da Casa 2">
-            <img src="./assets/casa2/casa2-quarto.webp" alt="Quarto da Casa 2">
+            <img src="./assets/casa2/casa2-quarto.webp" alt="Quarto da Casa 2" loading="lazy" decoding="async">
           </button>
           <button class="photo gallery-trigger" data-gallery="casa2" aria-label="Abrir galeria da Casa 2">
-            <img src="./assets/casa2/casa2-piscina-01.webp" alt="Piscina da Casa 2">
+            <img src="./assets/casa2/casa2-piscina-01.webp" alt="Piscina da Casa 2" loading="lazy" decoding="async">
           </button>
         </div>
       </article>
@@ -367,34 +487,34 @@ footer > * {
       <div class="section-head">
         <div>
           <p class="eyebrow">POR PERTO</p>
-          <h2>Descobrir o Alto Alentejo.</h2>
+          <h2>O que fazer no Alto Alentejo.</h2>
         </div>
-        <p>Uma seleção de lugares para construir dias tranquilos, entre águas termais, vilas históricas, natureza e cavalos lusitanos.</p>
+        <p>Sugestões do que fazer em Cabeço de Vide e na região de Portalegre: águas termais, vilas históricas, Serra de São Mamede, Marvão, Castelo de Vide e a tradição equestre de Alter do Chão.</p>
       </div>
 
       <div class="place-grid">
         <a class="place-card photo-card" href="https://www.google.com/maps/search/?api=1&query=Termas+da+Sulfurea+Cabeco+de+Vide" target="_blank" rel="noopener">
-          <img src="./assets/descobrir/termas-sulfurea.png" alt="Termas da Sulfúrea"><div class="place-overlay"></div>
+          <img src="./assets/descobrir/termas-sulfurea.webp" alt="Termas da Sulfúrea" loading="lazy" decoding="async"><div class="place-overlay"></div>
           <span class="place-no">01</span><div class="place-card-copy"><small>CABEÇO DE VIDE</small><h3>Termas da Sulfúrea</h3><p>Águas termais e tranquilidade junto à Ribeira da Vide.</p></div><span class="arrow">↗</span>
         </a>
         <a class="place-card photo-card" href="https://www.google.com/maps/search/?api=1&query=Centro+Historico+Cabeco+de+Vide" target="_blank" rel="noopener">
-          <img src="./assets/descobrir/cabeco-de-vide.png" alt="Centro histórico de Cabeço de Vide"><div class="place-overlay"></div>
+          <img src="./assets/descobrir/cabeco-de-vide.webp" alt="Centro histórico de Cabeço de Vide" loading="lazy" decoding="async"><div class="place-overlay"></div>
           <span class="place-no">02</span><div class="place-card-copy"><small>CABEÇO DE VIDE</small><h3>Centro Histórico</h3><p>Torre do Relógio, Pelourinho e ruas cheias de história.</p></div><span class="arrow">↗</span>
         </a>
         <a class="place-card photo-card" href="https://www.google.com/maps/search/?api=1&query=Coudelaria+de+Alter+Alter+do+Chao" target="_blank" rel="noopener">
-          <img src="./assets/descobrir/coudelaria-alter.png" alt="Coudelaria de Alter"><div class="place-overlay"></div>
+          <img src="./assets/descobrir/coudelaria-alter.webp" alt="Coudelaria de Alter" loading="lazy" decoding="async"><div class="place-overlay"></div>
           <span class="place-no">03</span><div class="place-card-copy"><small>ALTER DO CHÃO</small><h3>Coudelaria de Alter</h3><p>Tradição equestre e o cavalo puro-sangue Lusitano.</p></div><span class="arrow">↗</span>
         </a>
         <a class="place-card photo-card" href="https://www.google.com/maps/search/?api=1&query=Parque+Natural+Serra+de+Sao+Mamede" target="_blank" rel="noopener">
-          <img src="./assets/descobrir/serra-sao-mamede.png" alt="Serra de São Mamede"><div class="place-overlay"></div>
+          <img src="./assets/descobrir/serra-sao-mamede.webp" alt="Serra de São Mamede" loading="lazy" decoding="async"><div class="place-overlay"></div>
           <span class="place-no">04</span><div class="place-card-copy"><small>PORTALEGRE</small><h3>Serra de São Mamede</h3><p>Percursos, natureza e um Alentejo surpreendentemente verde.</p></div><span class="arrow">↗</span>
         </a>
         <a class="place-card photo-card" href="https://www.google.com/maps/search/?api=1&query=Castelo+de+Vide" target="_blank" rel="noopener">
-          <img src="./assets/descobrir/castelo-de-vide.png" alt="Castelo de Vide"><div class="place-overlay"></div>
+          <img src="./assets/descobrir/castelo-de-vide.webp" alt="Castelo de Vide" loading="lazy" decoding="async"><div class="place-overlay"></div>
           <span class="place-no">05</span><div class="place-card-copy"><small>CASTELO DE VIDE</small><h3>Castelo de Vide</h3><p>Castelo, judiaria e ruas brancas entre serra e planície.</p></div><span class="arrow">↗</span>
         </a>
         <a class="place-card photo-card" href="https://www.google.com/maps/search/?api=1&query=Castelo+de+Marvao" target="_blank" rel="noopener">
-          <img src="./assets/descobrir/marvao.png" alt="Marvão"><div class="place-overlay"></div>
+          <img src="./assets/descobrir/marvao.webp" alt="Marvão" loading="lazy" decoding="async"><div class="place-overlay"></div>
           <span class="place-no">06</span><div class="place-card-copy"><small>MARVÃO</small><h3>Marvão</h3><p>Uma vila muralhada com vistas inesquecíveis sobre a região.</p></div><span class="arrow">↗</span>
         </a>
       </div>
@@ -404,7 +524,7 @@ footer > * {
       <div class="food-heading">
         <p class="eyebrow light">À MESA</p>
         <h2>Onde comer<br>por perto.</h2>
-        <p>Algumas sugestões para descobrir a cozinha da região — das opções mesmo na vila a restaurantes para combinar com um passeio.</p>
+        <p>Sugestões de onde comer em Cabeço de Vide, Fronteira e Portalegre, para combinar a estadia com os sabores e a cozinha tradicional do Alto Alentejo.</p>
       </div>
       <div class="food-list">
         <a href="https://www.google.com/maps/search/?api=1&query=Vinha+d'Alho+Cabeco+de+Vide" target="_blank" rel="noopener">
@@ -425,6 +545,35 @@ footer > * {
       </div>
     </section>
 
+
+    <section class="seo-faq section-pad" id="perguntas">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">PLANEAR A ESTADIA</p>
+          <h2>Perguntas sobre a Alma d'Vide.</h2>
+        </div>
+        <p>Informação rápida para quem procura alojamento em Cabeço de Vide e quer explorar o distrito de Portalegre e o Alto Alentejo.</p>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-item">
+          <h3>Onde fica a Alma d'Vide?</h3>
+          <p>Em Cabeço de Vide, no distrito de Portalegre, numa localização prática para explorar o Alto Alentejo, incluindo Marvão, Castelo de Vide, Alter do Chão e a Serra de São Mamede.</p>
+        </article>
+        <article class="faq-item">
+          <h3>As duas casas têm piscina?</h3>
+          <p>Sim. Cada casa é independente e dispõe do seu próprio quintal com piscina, permitindo aproveitar a estadia com maior privacidade.</p>
+        </article>
+        <article class="faq-item">
+          <h3>O que visitar perto de Cabeço de Vide?</h3>
+          <p>As Termas da Sulfúrea ficam na própria vila. Na região pode ainda visitar a Coudelaria de Alter, Portalegre, Castelo de Vide, Marvão e o Parque Natural da Serra de São Mamede.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Como reservar uma casa?</h3>
+          <p>Pode consultar a página Airbnb de cada casa através dos respetivos botões ou pedir informação e disponibilidade diretamente por email.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="quote section-pad">
       <p class="eyebrow">AQUI, O LUXO É SIMPLES</p>
       <blockquote>“Ter espaço para ficar.<br>E vontade de não ir embora.”</blockquote>
@@ -436,7 +585,7 @@ footer > * {
         <h2>O Alentejo<br>está à sua espera.</h2>
       </div>
       <div class="contact-side">
-        <p>Cabeço de Vide · Portalegre · Portugal</p>
+        <p>Cabeço de Vide · Portalegre · Alto Alentejo · Portugal</p>
         <a class="btn btn-light" href="mailto:info@almadvide.pt">Pedir disponibilidade</a>
         <a href="mailto:info@almadvide.pt" class="contact-mail">info@almadvide.pt</a>
       </div>

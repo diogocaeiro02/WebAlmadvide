@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://almadvide.pt/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://almadvide.pt/assets/hero-almadvide.webp</image:loc><image:title>Alma d'Vide em Cabeço de Vide</image:title><image:caption>Alojamento com piscina no Alto Alentejo</image:caption></image:image>
+    <image:image><image:loc>https://almadvide.pt/assets/casa1/casa1-cozinha-sala-01.webp</image:loc><image:title>Casa 1 — cozinha e sala</image:title></image:image>
+    <image:image><image:loc>https://almadvide.pt/assets/casa1/casa1-quarto.webp</image:loc><image:title>Casa 1 — quarto</image:title></image:image>
+    <image:image><image:loc>https://almadvide.pt/assets/casa1/casa1-suite-01.webp</image:loc><image:title>Casa 1 — suite</image:title></image:image>
+  </url>
+</urlset>
