@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <!-- Alma d'Vide V5 — GitHub Pages + SEO técnico -->
+  <!-- Alma d'Vide V7 — contraste, legibilidade, branding + SEO -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#3d493f">
@@ -347,6 +347,206 @@ footer > * {
 .faq-item h3{font-family:var(--sans);font-size:17px;font-weight:500;margin:0 0 13px}
 .faq-item p{font-size:14px;line-height:1.8;color:#5f655f;margin:0}
 @media(max-width:700px){.faq-grid{grid-template-columns:1fr}}
+
+
+
+/* ============================================================
+   V7 — LEGIBILIDADE + LOGÓTIPO COM CONTRASTE SUBTIL
+   Mantém a tipografia e a estética, mas elimina transparências
+   excessivas e substitui a sombra do logótipo por um fundo glass.
+   ============================================================ */
+:root{
+  --ink:#182019;
+  --green:#314638;
+  --green-2:#48604f;
+  --paper:#fcfaf5;
+  --ivory:#f2eadf;
+  --sand:#d4c0a2;
+  --clay:#8b5f49;
+  --line:rgba(24,32,25,.24);
+}
+
+body{
+  color:var(--ink);
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* A Italiana mantém-se; apenas melhoramos a leitura no ecrã. */
+h1,h2,h3,blockquote{
+  text-rendering:optimizeLegibility;
+}
+
+/* Pequenos textos deixam de ser demasiado finos / transparentes. */
+.eyebrow{
+  font-size:11px;
+  letter-spacing:.21em;
+  font-weight:600;
+  color:#35463a;
+}
+.nav{
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:.055em;
+}
+
+/* Header sobre a fotografia: ligeiro véu no topo, sem pesar. */
+.topbar{
+  background:linear-gradient(180deg,rgba(12,18,14,.38) 0%,rgba(12,18,14,.12) 64%,rgba(12,18,14,0) 100%);
+  border-bottom-color:rgba(255,255,255,.20);
+}
+.topbar.scrolled{
+  background:rgba(252,250,245,.95);
+  color:var(--ink);
+  border-color:rgba(24,32,25,.14);
+  box-shadow:0 8px 28px rgba(27,40,31,.07);
+  backdrop-filter:blur(16px) saturate(120%);
+}
+.topbar.scrolled .nav a{color:var(--ink)}
+.topbar.scrolled .nav-cta{border-color:rgba(24,32,25,.52)}
+
+/* Logo branco: sem drop-shadow. O contraste vem de uma cápsula glass discreta. */
+.brand-logo{
+  padding:8px 13px 8px 11px;
+  border-radius:14px;
+  background:rgba(24,34,27,.24);
+  border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(10px) saturate(115%);
+  -webkit-backdrop-filter:blur(10px) saturate(115%);
+  transition:background .3s ease,border-color .3s ease,transform .3s ease;
+}
+.site-logo,
+.topbar:not(.scrolled) .site-logo,
+.topbar.scrolled .site-logo{
+  filter:none !important;
+  width:184px;
+  max-height:52px;
+}
+.topbar.scrolled .brand-logo{
+  background:linear-gradient(135deg,rgba(49,70,56,.97),rgba(62,84,68,.94));
+  border-color:rgba(49,70,56,.10);
+}
+.brand-logo:hover{transform:translateY(-1px)}
+.brand-logo:hover .site-logo{transform:none}
+
+/* Hero: aumentamos contraste pela fotografia, não por sombras no texto. */
+.hero-media{
+  filter:saturate(.88) contrast(1.01) brightness(.90);
+}
+.hero-shade{
+  background:
+    linear-gradient(90deg,rgba(12,18,14,.76) 0%,rgba(12,18,14,.52) 38%,rgba(12,18,14,.20) 70%,rgba(12,18,14,.08) 100%),
+    linear-gradient(180deg,rgba(10,15,11,.18) 0%,transparent 32%),
+    linear-gradient(0deg,rgba(10,15,11,.52) 0%,transparent 46%);
+}
+.hero-content{text-shadow:none}
+.hero h1{color:#fff}
+.eyebrow.light{color:#fff}
+.hero-text{
+  color:rgba(255,255,255,.96);
+  font-size:18px;
+  font-weight:400;
+}
+.light-link{color:#fff;font-weight:600}
+.hero-foot{
+  color:rgba(255,255,255,.96);
+  border-top-color:rgba(255,255,255,.44);
+  font-size:11px;
+  font-weight:500;
+}
+
+/* Conteúdo claro: texto secundário significativamente mais escuro. */
+.intro-copy,.section-head>p{
+  color:#3b453d;
+  font-size:16px;
+  font-weight:400;
+  line-height:1.85;
+}
+.facts span{
+  color:#465147;
+  font-size:10px;
+  font-weight:600;
+}
+.houses{background:#e8ddce}
+.house-copy>p:not(.eyebrow){
+  color:#38433a;
+  font-size:16px;
+  font-weight:400;
+}
+.house-index{color:rgba(24,32,25,.14)}
+.amenities li{
+  color:#29342b;
+  font-size:12px;
+  font-weight:600;
+  border-bottom-color:rgba(24,32,25,.22);
+}
+.amenities,.house-panel{border-color:rgba(24,32,25,.24)}
+
+/* Secção verde: deixa de usar texto excessivamente transparente. */
+.experience-break{background:#2e4436}
+.experience-break>p{
+  color:rgba(255,255,255,.92);
+  font-size:16px;
+  font-weight:400;
+}
+
+/* Descobrir: o degradé escuro trabalha pela legibilidade do texto. */
+.place-overlay{
+  background:linear-gradient(180deg,rgba(8,12,9,.16) 0%,rgba(8,12,9,.25) 36%,rgba(8,12,9,.92) 100%);
+}
+.place-card.photo-card small{
+  color:rgba(255,255,255,.92);
+  font-size:10px;
+  font-weight:600;
+}
+.place-card.photo-card p{
+  color:rgba(255,255,255,.94);
+  font-size:14px;
+  font-weight:400;
+}
+.place-card.photo-card .place-no{opacity:.92;font-weight:600}
+
+/* Restaurantes */
+.food{background:#1e3026}
+.food-heading>p:last-child{
+  color:rgba(255,255,255,.90);
+  font-size:15px;
+  font-weight:400;
+}
+.food-list{border-top-color:rgba(255,255,255,.28)}
+.food-list a{border-bottom-color:rgba(255,255,255,.24)}
+.food-list span{opacity:.78;font-weight:600}
+.food-list h3{font-weight:500}
+.food-list p{opacity:.82;font-size:12px;font-weight:500}
+
+/* FAQ / quote / contacto */
+.seo-faq{background:#f0e7da}
+.faq-grid{border-top-color:rgba(24,32,25,.25);border-left-color:rgba(24,32,25,.25)}
+.faq-item{border-right-color:rgba(24,32,25,.25);border-bottom-color:rgba(24,32,25,.25)}
+.faq-item h3{color:#1d261f;font-size:18px;font-weight:600}
+.faq-item p{color:#3d483f;font-size:15px;font-weight:400}
+.quote{background:#cfb792;color:#182019}
+.quote .eyebrow{color:#2b3b31}
+.contact{background:#79503e}
+.contact-side p{opacity:.94;font-weight:400}
+.contact-mail{font-weight:500;border-bottom-color:rgba(255,255,255,.78)}
+footer{color:rgba(255,255,255,.78)}
+
+.btn{font-weight:600}
+.btn-airbnb{border-color:rgba(24,32,25,.42)}
+
+@media(max-width:980px){
+  .nav{background:#fcfaf5;color:var(--ink);box-shadow:0 16px 34px rgba(26,38,30,.10)}
+  .nav a{color:var(--ink);border-bottom-color:rgba(24,32,25,.16)}
+  .nav-cta{border-color:rgba(24,32,25,.42)}
+}
+@media(max-width:600px){
+  .brand-logo{padding:7px 10px;border-radius:12px}
+  .site-logo,.topbar:not(.scrolled) .site-logo,.topbar.scrolled .site-logo{width:146px;max-height:43px}
+  .hero-text{font-size:16px}
+  .eyebrow{font-size:10px;letter-spacing:.18em}
+}
 
 </style>
 </head>
@@ -704,8 +904,8 @@ window.addEventListener('keydown',e=>{
 
 /* LINKS AIRBNB — colocar aqui os links exatos das duas casas */
 const AIRBNB_LINKS = {
-  casa1: "airbnb.pt/h/almadvideI",
-  casa2: "airbnb.pt/h/almadvideII"
+  casa1: "https://www.airbnb.pt/h/almadvideI",
+  casa2: "https://www.airbnb.pt/h/almadvideII"
 };
 
 document.querySelectorAll('[data-airbnb]').forEach(link => {
