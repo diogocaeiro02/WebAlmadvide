@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <!-- Alma d'Vide V7 — contraste, legibilidade, branding + SEO -->
+  <!-- Alma d'Vide V8 — contraste, legibilidade, branding + SEO -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#3d493f">
@@ -122,7 +122,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <style>
 :root{
   --ink:#20251f;
@@ -133,7 +133,7 @@
   --sand:#d7c8b2;
   --clay:#9f7056;
   --line:rgba(32,37,31,.17);
-  --serif:"Italiana", Georgia, serif;
+  --serif:"Playfair Display", Georgia, serif;
   --sans:"DM Sans", Arial, sans-serif;
 }
 *{box-sizing:border-box}
@@ -166,7 +166,7 @@ button{font:inherit}
 .eyebrow.light{color:rgba(255,255,255,.74)}
 h1,h2,h3,blockquote{font-family:var(--serif);font-weight:400}
 h1{font-size:clamp(64px,8vw,128px);line-height:.92;letter-spacing:-.035em;margin:0}
-h1 em{font-style:italic;font-family:Georgia,serif;font-weight:400}
+h1 em{font-style:italic;font-family:var(--serif);font-weight:500}
 .hero-text{max-width:520px;font-size:17px;line-height:1.7;color:rgba(255,255,255,.82);margin:28px 0 34px}
 .hero-actions{display:flex;gap:28px;align-items:center}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:15px 22px;border:1px solid transparent;cursor:pointer;font-size:11px;text-transform:uppercase;letter-spacing:.16em;transition:.25s}
@@ -548,12 +548,134 @@ footer{color:rgba(255,255,255,.78)}
   .eyebrow{font-size:10px;letter-spacing:.18em}
 }
 
+
+/* ============================================================
+   V8 — TIPOGRAFIA MAIS LEGÍVEL + LOGÓTIPO SEM CAIXA/SOMBRA
+   ============================================================ */
+
+/* Playfair Display mantém o ar editorial, mas com traços mais sólidos. */
+h1,h2,h3,blockquote{
+  font-family:var(--serif);
+  font-weight:500;
+  letter-spacing:-.022em;
+  text-rendering:optimizeLegibility;
+}
+h1{
+  font-weight:500;
+  line-height:.96;
+}
+h1 em{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:500;
+}
+.intro h2,.section-head h2,
+.experience-break h2,
+.food-heading h2,
+.contact h2{
+  font-weight:500;
+  line-height:1.06;
+}
+.house-copy h3,
+.place-card h3{
+  font-weight:500;
+}
+.quote blockquote{
+  font-size:clamp(44px,5.15vw,78px);
+  line-height:1.16;
+  letter-spacing:-.018em;
+  font-weight:500;
+  max-width:1040px;
+}
+
+/* Remove completamente a cápsula "glass" e qualquer sombra do logótipo. */
+.brand-logo,
+.topbar.scrolled .brand-logo{
+  padding:0;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+  box-shadow:none;
+  transform:none;
+}
+.brand-logo:hover{transform:none}
+
+/* Duas versões do mesmo logo: branco no hero, verde escuro no header claro. */
+.logo-stack{
+  position:relative;
+  display:block;
+  width:184px;
+  height:52px;
+}
+.site-logo{
+  position:absolute;
+  inset:0;
+  width:184px !important;
+  height:52px;
+  max-height:52px !important;
+  object-fit:contain;
+  object-position:left center;
+  filter:none !important;
+  transition:opacity .32s ease;
+}
+.logo-white{opacity:1}
+.logo-dark{opacity:0}
+
+.topbar.scrolled .logo-white{opacity:0}
+.topbar.scrolled .logo-dark{opacity:1}
+
+/* Em vez de sombrear o logo, escurecemos subtilmente o próprio topo da fotografia. */
+.topbar{
+  background:
+    linear-gradient(90deg,
+      rgba(14,22,16,.48) 0%,
+      rgba(14,22,16,.30) 20%,
+      rgba(14,22,16,.12) 48%,
+      rgba(14,22,16,.04) 72%,
+      rgba(14,22,16,0) 100%);
+  box-shadow:none;
+}
+.topbar.scrolled{
+  background:rgba(252,250,245,.97);
+  box-shadow:0 8px 30px rgba(24,32,25,.055);
+}
+
+/* Um pouco mais de definição nos títulos sobre fundos claros. */
+.quote{
+  color:#1e2a21;
+}
+.quote .eyebrow{
+  color:#314638;
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .logo-stack{
+    width:146px;
+    height:43px;
+  }
+  .site-logo{
+    width:146px !important;
+    height:43px;
+    max-height:43px !important;
+  }
+  .quote blockquote{
+    font-size:clamp(38px,11vw,54px);
+    line-height:1.18;
+  }
+}
+
 </style>
 </head>
 <body>
   <header class="topbar" id="topbar">
     <a class="brand brand-logo" href="#inicio" aria-label="Alma d'Vide - início">
-      <img src="./assets/logo-almadvide.png" alt="Alma d'Vide" class="site-logo" width="1100" height="300" decoding="async">
+      <span class="logo-stack" aria-hidden="true">
+        <img src="./assets/logo-almadvide.png" alt="" class="site-logo logo-white" width="1100" height="300" decoding="async">
+        <img src="./assets/logo-almadvide-dark.png" alt="" class="site-logo logo-dark" width="1100" height="300" decoding="async">
+      </span>
     </a>
 
     <button class="menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false">
