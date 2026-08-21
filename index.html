@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <!-- Alma d'Vide V8 — contraste, legibilidade, branding + SEO -->
+  <!-- Alma d'Vide V9 — contraste, legibilidade, branding + SEO -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#3d493f">
@@ -97,7 +97,7 @@
         "containsPlace": [
           {
             "@type":"Accommodation",
-            "name":"Alma d'Vide — Casa 1",
+            "name":"Alma d'Vide — Casa Alma",
             "numberOfBedrooms":2,
             "numberOfBathroomsTotal":2,
             "amenityFeature":[
@@ -107,12 +107,24 @@
           },
           {
             "@type":"Accommodation",
-            "name":"Alma d'Vide — Casa 2",
+            "name":"Alma d'Vide — Casa Vide",
             "numberOfBedrooms":2,
             "numberOfBathroomsTotal":2,
             "amenityFeature":[
               {"@type":"LocationFeatureSpecification","name":"Piscina","value":true},
               {"@type":"LocationFeatureSpecification","name":"Quintal","value":true}
+            ]
+          },
+          {
+            "@type":"Accommodation",
+            "name":"Alma d'Vide — Casa Completa",
+            "description":"Reserva conjunta da Casa Alma e Casa Vide, ligadas por um portão entre os quintais.",
+            "numberOfBedrooms":4,
+            "numberOfBathroomsTotal":4,
+            "amenityFeature":[
+              {"@type":"LocationFeatureSpecification","name":"Duas piscinas","value":true},
+              {"@type":"LocationFeatureSpecification","name":"Dois quintais ligados por portão","value":true},
+              {"@type":"LocationFeatureSpecification","name":"Duas cozinhas equipadas","value":true}
             ]
           }
         ]
@@ -667,6 +679,181 @@ h1 em{
   }
 }
 
+
+/* ============================================================
+   V9 — CASA ALMA + CASA VIDE + RESERVA CONJUNTA ALMA D'VIDE
+   ============================================================ */
+.combined-stay{
+  max-width:1500px;
+  margin:0 auto 30px;
+  border-top:1px solid var(--line);
+  padding:105px 0 25px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:7vw;
+  align-items:center;
+}
+.combined-visual{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  min-height:610px;
+}
+.combined-photo{
+  position:relative;
+  overflow:hidden;
+  min-height:520px;
+  background:#d8cebf;
+}
+.combined-photo-main{
+  transform:translateY(44px);
+}
+.combined-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.combined-photo:hover img{transform:scale(1.025)}
+.combined-photo>span{
+  position:absolute;
+  left:18px;
+  bottom:18px;
+  background:rgba(250,248,243,.94);
+  color:var(--ink);
+  padding:9px 13px;
+  font-size:9px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.combined-gate{
+  position:absolute;
+  left:50%;
+  top:50%;
+  z-index:4;
+  transform:translate(-50%,-50%);
+  width:156px;
+  min-height:156px;
+  border-radius:50%;
+  background:var(--green);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  box-shadow:0 14px 35px rgba(32,37,31,.18);
+}
+.combined-gate::before,
+.combined-gate::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:42px;
+  height:1px;
+  background:rgba(255,255,255,.55);
+}
+.combined-gate::before{right:100%}
+.combined-gate::after{left:100%}
+.gate-icon{
+  font-family:var(--serif);
+  font-size:31px;
+  line-height:1;
+  margin-bottom:8px;
+}
+.combined-gate p{
+  margin:0;
+  font-size:8px;
+  line-height:1.5;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.8);
+}
+.combined-copy h3{
+  font-size:clamp(58px,5.6vw,88px);
+  margin:0 0 24px;
+  line-height:1;
+}
+.combined-copy>p{
+  font-size:15px;
+  line-height:1.9;
+  color:#4c554d;
+}
+.combined-copy .combined-lead{
+  font-family:var(--serif);
+  font-size:25px;
+  line-height:1.45;
+  color:var(--ink);
+  margin-bottom:20px;
+}
+.combined-features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  margin:36px 0 34px;
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+.combined-features div{
+  padding:18px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.combined-features b{
+  font-family:var(--serif);
+  font-size:30px;
+  font-weight:500;
+}
+.combined-features span{
+  font-size:9px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#596159;
+}
+.combined-actions{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  flex-wrap:wrap;
+}
+.combined-link{
+  color:var(--ink);
+}
+
+@media(max-width:980px){
+  .combined-stay{
+    grid-template-columns:1fr;
+    gap:65px;
+    padding:80px 0 10px;
+  }
+  .combined-visual{min-height:500px}
+  .combined-photo{min-height:430px}
+}
+@media(max-width:600px){
+  .combined-visual{
+    min-height:520px;
+    gap:8px;
+  }
+  .combined-photo{min-height:430px}
+  .combined-photo-main{transform:translateY(28px)}
+  .combined-gate{
+    width:118px;
+    min-height:118px;
+  }
+  .combined-gate::before,
+  .combined-gate::after{width:20px}
+  .combined-gate p{font-size:7px}
+  .combined-copy h3{font-size:52px}
+  .combined-copy .combined-lead{font-size:22px}
+  .combined-features{grid-template-columns:1fr 1fr}
+  .combined-actions{align-items:stretch;flex-direction:column}
+  .combined-actions .btn{width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -721,7 +908,7 @@ h1 em{
         <div><b>02</b><span>casas independentes</span></div>
         <div><b>02</b><span>quartos por casa</span></div>
         <div><b>01</b><span>piscina por casa</span></div>
-        <div><b>∞</b><span>tempo para desacelerar</span></div>
+        <div><b>01</b><span>portão de ligação</span></div>
       </div>
     </section>
 
@@ -731,14 +918,14 @@ h1 em{
           <p class="eyebrow">AS CASAS</p>
           <h2>Escolha o seu lugar.</h2>
         </div>
-        <p>Duas casas geminadas e independentes, preparadas para estadias confortáveis em família, a dois ou entre amigos.</p>
+        <p>Duas casas geminadas e independentes — Casa Alma e Casa Vide — que podem ser reservadas separadamente ou em conjunto como Alma d'Vide.</p>
       </div>
 
       <article class="house-panel">
         <div class="house-copy">
           <span class="house-index">01</span>
-          <p class="eyebrow">ALMA D'VIDE · CASA 1</p>
-          <h3>Casa 1</h3>
+          <p class="eyebrow">ALMA D'VIDE · CASA ALMA</p>
+          <h3>Casa Alma</h3>
           <p>Interiores claros, madeiras quentes e apontamentos naturais. Uma casa pensada para descansar, cozinhar sem pressa e aproveitar o Alentejo de porta aberta para o quintal.</p>
           <ul class="amenities">
             <li>1 quarto + 1 suite</li>
@@ -753,14 +940,14 @@ h1 em{
           </div>
         </div>
         <div class="house-collage">
-          <button class="photo photo-main gallery-trigger" data-gallery="casa1" aria-label="Abrir galeria da Casa 1">
-            <img src="./assets/casa1/casa1-cozinha-sala-01.webp" alt="Cozinha e sala da Casa 1" loading="lazy" decoding="async">
+          <button class="photo photo-main gallery-trigger" data-gallery="casa1" aria-label="Abrir galeria da Casa Alma">
+            <img src="./assets/casa1/casa1-cozinha-sala-01.webp" alt="Cozinha e sala da Casa Alma" loading="lazy" decoding="async">
           </button>
-          <button class="photo gallery-trigger" data-gallery="casa1" aria-label="Abrir galeria da Casa 1">
-            <img src="./assets/casa1/casa1-quarto.webp" alt="Quarto da Casa 1" loading="lazy" decoding="async">
+          <button class="photo gallery-trigger" data-gallery="casa1" aria-label="Abrir galeria da Casa Alma">
+            <img src="./assets/casa1/casa1-quarto.webp" alt="Quarto da Casa Alma" loading="lazy" decoding="async">
           </button>
-          <button class="photo gallery-trigger" data-gallery="casa1" aria-label="Abrir galeria da Casa 1">
-            <img src="./assets/casa1/casa1-suite-01.webp" alt="Suite da Casa 1" loading="lazy" decoding="async">
+          <button class="photo gallery-trigger" data-gallery="casa1" aria-label="Abrir galeria da Casa Alma">
+            <img src="./assets/casa1/casa1-suite-01.webp" alt="Suite da Casa Alma" loading="lazy" decoding="async">
           </button>
         </div>
       </article>
@@ -768,8 +955,8 @@ h1 em{
       <article class="house-panel reverse">
         <div class="house-copy">
           <span class="house-index">02</span>
-          <p class="eyebrow">ALMA D'VIDE · CASA 2</p>
-          <h3>Casa 2</h3>
+          <p class="eyebrow">ALMA D'VIDE · CASA VIDE</p>
+          <h3>Casa Vide</h3>
           <p>A mesma filosofia de conforto, com identidade própria. A galeria está já preparada com os nomes definitivos para receber as fotografias da segunda casa.</p>
           <ul class="amenities">
             <li>1 quarto + 1 suite</li>
@@ -784,17 +971,55 @@ h1 em{
           </div>
         </div>
         <div class="house-collage">
-          <button class="photo photo-main gallery-trigger" data-gallery="casa2" aria-label="Abrir galeria da Casa 2">
-            <img src="./assets/casa2/casa2-cozinha-sala-01.webp" alt="Cozinha e sala da Casa 2" loading="lazy" decoding="async">
+          <button class="photo photo-main gallery-trigger" data-gallery="casa2" aria-label="Abrir galeria da Casa Vide">
+            <img src="./assets/casa2/casa2-cozinha-sala-01.webp" alt="Cozinha e sala da Casa Vide" loading="lazy" decoding="async">
           </button>
-          <button class="photo gallery-trigger" data-gallery="casa2" aria-label="Abrir galeria da Casa 2">
-            <img src="./assets/casa2/casa2-quarto.webp" alt="Quarto da Casa 2" loading="lazy" decoding="async">
+          <button class="photo gallery-trigger" data-gallery="casa2" aria-label="Abrir galeria da Casa Vide">
+            <img src="./assets/casa2/casa2-quarto.webp" alt="Quarto da Casa Vide" loading="lazy" decoding="async">
           </button>
-          <button class="photo gallery-trigger" data-gallery="casa2" aria-label="Abrir galeria da Casa 2">
-            <img src="./assets/casa2/casa2-piscina-01.webp" alt="Piscina da Casa 2" loading="lazy" decoding="async">
+          <button class="photo gallery-trigger" data-gallery="casa2" aria-label="Abrir galeria da Casa Vide">
+            <img src="./assets/casa2/casa2-piscina-01.webp" alt="Piscina da Casa Vide" loading="lazy" decoding="async">
           </button>
         </div>
       </article>
+
+      <article class="combined-stay" id="almadvide-completa">
+        <div class="combined-visual">
+          <div class="combined-photo combined-photo-main">
+            <img src="./assets/casa1/casa1-cozinha-sala-01.webp" alt="Interior da Casa Alma" loading="lazy" decoding="async">
+            <span>Casa Alma</span>
+          </div>
+          <div class="combined-gate">
+            <span class="gate-line"></span>
+            <div class="gate-icon" aria-hidden="true">↔</div>
+            <p>Ligação pelo portão<br>dos quintais</p>
+          </div>
+          <div class="combined-photo">
+            <img src="./assets/casa2/casa2-cozinha-sala-01.webp" alt="Interior da Casa Vide" loading="lazy" decoding="async">
+            <span>Casa Vide</span>
+          </div>
+        </div>
+
+        <div class="combined-copy">
+          <p class="eyebrow">AS DUAS CASAS · UMA SÓ ESTADIA</p>
+          <h3>Alma d'Vide</h3>
+          <p class="combined-lead">Para famílias e grupos que querem ficar juntos, sem abdicar do espaço de cada casa.</p>
+          <p>A Casa Alma e a Casa Vide têm uma ligação através de um portão nos quintais. Ao reservar as duas em conjunto, pode circular entre os dois espaços de forma simples, mantendo ao mesmo tempo a independência de cada casa.</p>
+
+          <div class="combined-features">
+            <div><b>04</b><span>quartos no total</span></div>
+            <div><b>04</b><span>instalações sanitárias</span></div>
+            <div><b>02</b><span>cozinhas equipadas</span></div>
+            <div><b>02</b><span>quintais com piscina</span></div>
+          </div>
+
+          <div class="combined-actions">
+            <a class="btn btn-dark" href="mailto:info@almadvide.pt?subject=Disponibilidade%20Alma%20d%27Vide%20-%20duas%20casas">Reservar as duas casas <span>↗</span></a>
+            <a class="text-link combined-link" href="#contactos">Pedir mais informações</a>
+          </div>
+        </div>
+      </article>
+
     </section>
 
     <section class="experience-break">
@@ -889,9 +1114,14 @@ h1 em{
           <h3>O que visitar perto de Cabeço de Vide?</h3>
           <p>As Termas da Sulfúrea ficam na própria vila. Na região pode ainda visitar a Coudelaria de Alter, Portalegre, Castelo de Vide, Marvão e o Parque Natural da Serra de São Mamede.</p>
         </article>
+
+        <article class="faq-item">
+          <h3>É possível reservar a Casa Alma e a Casa Vide em conjunto?</h3>
+          <p>Sim. As duas casas podem ser reservadas ao mesmo tempo como Alma d'Vide. Os quintais têm ligação através de um portão, permitindo circular facilmente entre as duas casas durante a estadia.</p>
+        </article>
         <article class="faq-item">
           <h3>Como reservar uma casa?</h3>
-          <p>Pode consultar a página Airbnb de cada casa através dos respetivos botões ou pedir informação e disponibilidade diretamente por email.</p>
+          <p>Pode consultar a página Airbnb da Casa Alma ou da Casa Vide através dos respetivos botões. Para reservar as duas casas em conjunto como Alma d'Vide, pode pedir disponibilidade diretamente por email.</p>
         </article>
       </div>
     </section>
@@ -952,30 +1182,30 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 const galleries = {
   casa1: [
-    ['./assets/casa1/casa1-cozinha-sala-01.webp','Casa 1 · Cozinha & Sala'],
-    ['./assets/casa1/casa1-cozinha-sala-02.webp','Casa 1 · Cozinha & Sala'],
-    ['./assets/casa1/casa1-hall.webp','Casa 1 · Hall'],
-    ['./assets/casa1/casa1-quarto.webp','Casa 1 · Quarto'],
-    ['./assets/casa1/casa1-suite-01.webp','Casa 1 · Suite'],
-    ['./assets/casa1/casa1-suite-02.webp','Casa 1 · Suite'],
-    ['./assets/casa1/casa1-suite-wc.webp','Casa 1 · WC da Suite'],
-    ['./assets/casa1/casa1-wc-social.webp','Casa 1 · WC'],
-    ['./assets/casa1/casa1-quintal-01.webp','Casa 1 · Quintal'],
-    ['./assets/casa1/casa1-quintal-02.webp','Casa 1 · Quintal'],
-    ['./assets/casa1/casa1-piscina-01.webp','Casa 1 · Piscina']
+    ['./assets/casa1/casa1-cozinha-sala-01.webp','Casa Alma · Cozinha & Sala'],
+    ['./assets/casa1/casa1-cozinha-sala-02.webp','Casa Alma · Cozinha & Sala'],
+    ['./assets/casa1/casa1-hall.webp','Casa Alma · Hall'],
+    ['./assets/casa1/casa1-quarto.webp','Casa Alma · Quarto'],
+    ['./assets/casa1/casa1-suite-01.webp','Casa Alma · Suite'],
+    ['./assets/casa1/casa1-suite-02.webp','Casa Alma · Suite'],
+    ['./assets/casa1/casa1-suite-wc.webp','Casa Alma · WC da Suite'],
+    ['./assets/casa1/casa1-wc-social.webp','Casa Alma · WC'],
+    ['./assets/casa1/casa1-quintal-01.webp','Casa Alma · Quintal'],
+    ['./assets/casa1/casa1-quintal-02.webp','Casa Alma · Quintal'],
+    ['./assets/casa1/casa1-piscina-01.webp','Casa Alma · Piscina']
   ],
   casa2: [
-    ['./assets/casa2/casa2-cozinha-sala-01.webp','Casa 2 · Cozinha & Sala'],
-    ['./assets/casa2/casa2-cozinha-sala-02.webp','Casa 2 · Cozinha & Sala'],
-    ['./assets/casa2/casa2-hall.webp','Casa 2 · Hall'],
-    ['./assets/casa2/casa2-quarto.webp','Casa 2 · Quarto'],
-    ['./assets/casa2/casa2-suite-01.webp','Casa 2 · Suite'],
-    ['./assets/casa2/casa2-suite-02.webp','Casa 2 · Suite'],
-    ['./assets/casa2/casa2-suite-wc.webp','Casa 2 · WC da Suite'],
-    ['./assets/casa2/casa2-wc-social.webp','Casa 2 · WC'],
-    ['./assets/casa2/casa2-quintal-01.webp','Casa 2 · Quintal'],
-    ['./assets/casa2/casa2-quintal-02.webp','Casa 2 · Quintal'],
-    ['./assets/casa2/casa2-piscina-01.webp','Casa 2 · Piscina']
+    ['./assets/casa2/casa2-cozinha-sala-01.webp','Casa Vide · Cozinha & Sala'],
+    ['./assets/casa2/casa2-cozinha-sala-02.webp','Casa Vide · Cozinha & Sala'],
+    ['./assets/casa2/casa2-hall.webp','Casa Vide · Hall'],
+    ['./assets/casa2/casa2-quarto.webp','Casa Vide · Quarto'],
+    ['./assets/casa2/casa2-suite-01.webp','Casa Vide · Suite'],
+    ['./assets/casa2/casa2-suite-02.webp','Casa Vide · Suite'],
+    ['./assets/casa2/casa2-suite-wc.webp','Casa Vide · WC da Suite'],
+    ['./assets/casa2/casa2-wc-social.webp','Casa Vide · WC'],
+    ['./assets/casa2/casa2-quintal-01.webp','Casa Vide · Quintal'],
+    ['./assets/casa2/casa2-quintal-02.webp','Casa Vide · Quintal'],
+    ['./assets/casa2/casa2-piscina-01.webp','Casa Vide · Piscina']
   ]
 };
 
